@@ -1,113 +1,212 @@
-import Image from "next/image";
+'use client'
+import MarcasData from '@/data/marcas.json'
+import produtosDestacados from '@/data/destaques.json'
+import { ArrowRight, LayoutList, Star } from 'lucide-react';
+import { MarcasSct } from "@/components/Sections/MarcasSct";
+import { Banners } from "@/components/Banners";
+import { Container } from "@/components/Container";
+import { SliderProdutos } from '@/components/SliderProducts/SliderProducts';
+import SliderCategorias from '@/components/SliderCategorys';
+import Link from 'next/link';
+import Image from 'next/image';
+import SliderBanner from '@/components/SliderBanners';
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+
+
+const marcasDestacadas = MarcasData.slice(0,8)
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+   <main className="bg-primary">
+    <section id='hero' className='py-0 pt-8'>
+      <Container className='px-0 lg:px-0'>
+
+    <Carousel opts={{loop:true}} className='hidden lg:flex'>
+    
+    <CarouselContent className=''>
+        <CarouselItem><div className='w-full   bg-black'>
+          <Image src={'/banners/sliderHero/1568x400Azul.png'}  objectFit='cover' layout='responsive' width={1568} height={400} alt='banner'/>
+          </div></CarouselItem>
+       
+        <CarouselItem><div className='w-full   bg-black'>
+          <Image src={'/banners/sliderHero/1568x400Amarelo.png'}  objectFit='cover' layout='responsive' width={1568} height={400} alt='banner'/>
+          </div></CarouselItem>
+       
+        <CarouselItem><div className='w-full   bg-black'>
+          <Image src={'/banners/sliderHero/1568x400Azul2.png'}  objectFit='cover' layout='responsive' width={1568} height={400} alt='banner'/>
+          </div></CarouselItem>
+  
+       
+      </CarouselContent>
+
+
+  
+      <CarouselPrevious className='z-[2]' />
+    <CarouselNext className='z-[2]' />
+  
+</Carousel>
+<Carousel opts={{loop:true}} className='lg:hidden'>
+    
+
+      <CarouselContent className=''>
+        <CarouselItem><div className='w-full   bg-black'>
+          <Image src={'/banners/sliderHero/640x295Azul.png'}  objectFit='cover' layout='responsive' width={640} height={295} alt='banner'/>
+          </div></CarouselItem>
+       
+        <CarouselItem><div className='w-full   bg-black'>
+          <Image src={'/banners/sliderHero/640x295Amarelo.png'}  objectFit='cover' layout='responsive' width={640} height={295} alt='banner'/>
+          </div></CarouselItem>
+       
+        <CarouselItem><div className='w-full   bg-black'>
+          <Image src={'/banners/sliderHero/640x295Azul2.png'}  objectFit='cover' layout='responsive' width={640} height={295} alt='banner'/>
+          </div></CarouselItem>
+      
+       
+      </CarouselContent>
+
+  
+      <CarouselPrevious />
+    <CarouselNext />
+  
+</Carousel>
+      </Container>
+
+    </section>
+
+    <Container className=" flex items-center bg-[#082477] py-[16px]">
+          <h3 className="uppercase font-poppins text-[.875rem] lg:text-[1.25rem] text-white font-bold">destaque semanal</h3>
+    </Container>
+    <Container id='carousel1' className='pr-0 bg-white pt-3'>
+      <SliderProdutos produtos={produtosDestacados.slice(0,10)}/>
+      <Link className='uppercase flex justify-center lg:justify-end text-[0.75rem] lg:font-bold lg:text-[.875rem] text-center gap-[10px] pt-[10px] items-center font-poppins font-semibold text-primary ' href={'/'}>ver todos <ArrowRight size={24}/></Link>
+    </Container>
+
+    <Container id='banners' className='bg-white'>
+        <Banners/>
+    </Container>
+
+    <MarcasSct id='marcas' marcas={marcasDestacadas} title="Marcas Recomendadas" />
+
+    <Container className=' bg-white pt-3'>
+      <div className='flex justify-between items-center py-5'>
+        <div className='flex items-center gap-[5px]'>
+          <Star size={20}/>
+          <h2 className='text-[16px]  uppercase text-[#42464d] font-bold font-poppins sm:text-[1.45rem] lg:text-[1.25rem]'>
+            Produtos destacados
+          </h2>
         </div>
+      <Link href={'/marcas'} className="uppercase flex items-center gap-[2px] text-[0.75rem] sm:text-[1rem] text-primary font-poppins font-semibold">ver todas<ArrowRight size={22}/></Link>
+      </div>
+      <SliderProdutos produtos={produtosDestacados.slice(0,10)}/>
+    </Container>
+
+    <Container id='categorias' className='bg-white py-4'>
+      <div className='flex items-center justify-between mb-5'>
+        <div className='flex items-center gap-[5px]'>
+          <LayoutList size={22}/>
+          <h2 className='uppercase font-bold text-[1rem] text-[#42464d] leading-[.875rem] font-poppins '>categorias</h2>
+        </div>
+          <Link href={'/marcas'} className="uppercase flex items-center gap-[2px] text-[0.75rem] sm:text-[1rem] text-primary font-poppins font-semibold">ver todas<ArrowRight size={22}/></Link>
       </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <SliderCategorias/>
+    </Container>
+    
+    <Container className='bg-white hidden min-[600px]:block'>
+
+      <Image src={'/banners/sliderHero/1568x400Amarelo.png'} width={1504} height={248} layout='responsive' alt='banner'/>
+    </Container>
+
+    <Container className=' bg-white pt-3 lg:flex lg:justify-between lg:pt-10 '>
+      <div className='lg:w-[75%] lg:px-4'>
+        <div className='flex justify-between items-center py-5 lg:pt-0'>
+          <div className='flex items-center gap-[5px]'>
+            <Star size={20}/>
+            <h2 className='text-[16px]  uppercase text-[#42464d] font-bold font-poppins sm:text-[1.45rem] lg:text-[1.25rem]'>
+              Produtos destacados
+            </h2>
+          </div>
+          <Link href={'/marcas'} className="uppercase flex items-center gap-[2px] text-[0.75rem] sm:text-[1rem] text-primary font-poppins font-semibold">ver todas<ArrowRight size={22}/></Link>
+        </div>
+        <SliderProdutos produtos={produtosDestacados.slice(0,10)}/>
+        <div className='flex justify-between items-center py-5 lg:pt-14'>
+          <div className='flex items-center gap-[5px]'>
+            <Star size={20}/>
+            <h2 className='text-[16px]  uppercase text-[#42464d] font-bold font-poppins sm:text-[1.45rem] lg:text-[1.25rem]'>
+              Produtos destacados
+            </h2>
+          </div>
+          <Link href={'/marcas'} className="uppercase flex items-center gap-[2px] text-[0.75rem] sm:text-[1rem] text-primary font-poppins font-semibold">ver todas<ArrowRight size={22}/></Link>
+        </div>
+        <SliderProdutos produtos={produtosDestacados.slice(0,10)}/>
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className='hidden lg:flex lg:flex-col lg:items-center lg:justify-between lg:w-[23%] '>
+        <Link href={'/products?category=motor'}>
+        <Image width={350} height={300} objectFit='cover' src={'/banners/components/motoresAzul.png'} alt='banner'/>
+        </Link>
+        <Link href={'/products?category=parabrisa'}>
+        <Image width={350} height={300} objectFit='cover' src={'/banners/components/parabrisasLaranja.png'} alt='banner'/>
+        </Link>
+        <Link href={'/products?category=retrovisor'}>
+        <Image width={350} height={300} objectFit='cover' src={'/banners/components/retrovisoresAzul.png'} alt='banner'/>
+        </Link>
       </div>
-    </main>
+    </Container>
+
+    <Container className='bg-white pt-3'>
+    <SliderBanner/>
+   </Container>
+
+    <Container className='bg-white pt-10'>
+      <div className='flex justify-between items-center py-5 lg:pt-0'>
+        <div className='flex items-center gap-[5px]'>
+          <Star size={20}/>
+          <h2 className='text-[16px]  uppercase text-[#42464d] font-bold font-poppins sm:text-[1.45rem] lg:text-[1.25rem]'>
+            Produtos destacados
+          </h2>
+        </div>
+        <Link href={'/marcas'} className="uppercase flex items-center gap-[2px] text-[0.75rem] sm:text-[1rem] text-primary font-poppins font-semibold">ver todas<ArrowRight size={22}/></Link>
+      </div>
+      <SliderProdutos produtos={produtosDestacados.slice(0,10)}/>
+    </Container>
+
+   
+
+   <Container className='bg-white py-3'>
+    <div className='flex flex-col min-[600px]:flex-row min-[600px]:justify-between w-full gap-[16px]'>
+      <div className='flex flex-col w-full max-w-[480px]'>
+        <Image src={'/banners/components/bannertriplo/480x210Azul.png'} alt='banner' width={480} height={210} layout='responsive'/>
+        <div className='p-[16px] hidden'>
+          <p className='text-[14px] font-poppins'>Lorem ipsum dolor sit amet.</p>
+          <p className='text-[10px] font-poppins'>Lorem ipsum dolor sit amet.</p>
+        </div>     
+      </div>
+      <div className='flex flex-col w-full max-w-[480px]'>
+        <Image src={'/banners/components/bannertriplo/480x210Azul2.png'} alt='banner' width={480} height={210} layout='responsive'/>
+        <div className='p-[16px] hidden'>
+          <p className='text-[14px] font-poppins'>Lorem ipsum dolor sit amet.</p>
+          <p className='text-[10px] font-poppins'>Lorem ipsum dolor sit amet.</p>
+        </div>     
+      </div>
+      <div className='flex flex-col w-full max-w-[480px]'>
+      <Link href={'/products?category=lanterna'}>
+        <Image src={'/banners/components/bannertriplo/480x210Azul3.png'} alt='banner' width={480} height={210} layout='responsive'/>
+        </Link>
+        <div className='p-[16px] hidden'>
+          <p className='text-[14px] font-poppins'>Lorem ipsum dolor sit amet.</p>
+          <p className='text-[10px] font-poppins'>Lorem ipsum dolor sit amet.</p>
+        </div>     
+      </div>
+     
+    </div>
+   </Container>
+   </main>
   );
 }

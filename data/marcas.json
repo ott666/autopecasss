@@ -1,0 +1,23 @@
+[
+    {"id": "22", "marca": "Fiat", "produtos": 482, "url": "/fiat.png", "link":"fiat"},
+    {"id": "21", "marca": "Volkswagen", "produtos": 436, "url": "/volkswagen.png", "link":"volkswagen"},
+    {"id": "20", "marca": "Ford", "produtos": 374, "url": "/ford.png", "link":"ford"},
+    {"id": "19", "marca": "Hyundai", "produtos": 335, "url": "/hyundai.png", "link":"hyundai"},
+    {"id": "18", "marca": "GM", "produtos": 234, "url": "/gm.jpg", "link":"gm"},
+    {"id": "17", "marca": "Chevrolet", "produtos": 201, "url": "/chevrolet.jpg", "link":"chevrolet"},
+    {"id": "16", "marca": "Renault", "produtos": 175, "url": "/renault.jpg", "link":"renault"},
+    {"id": "15", "marca": "Toyota", "produtos": 159, "url": "/toyota.jpg", "link":"toyota"},
+    {"id": "14", "marca": "BMW", "produtos": 154, "url": "/bmw.png", "link":"bmw"},
+    {"id": "13", "marca": "Nissan", "produtos": 130, "url": "/nissan.png", "link":"nissan"},
+    {"id": "12", "marca": "Jeep", "produtos": 121, "url": "/jeep.png", "link":"jeep"},
+    {"id": "11", "marca": "Chery", "produtos": 111, "url": "/cherry.png", "link":"cherry"},
+    {"id": "10", "marca": "Honda", "produtos": 110, "url": "/honda.png", "link":"honda"},
+    {"id": "9", "marca": "Kia", "produtos": 70, "url": "/kia.png", "link":"kia"},
+    {"id": "8", "marca": "Volvo", "produtos": 69, "url": "/volvo.png", "link":"volvo"},
+    {"id": "7", "marca": "Mitsubishi", "produtos": 66, "url": "/mitsubishi.png", "link":"mitsubishi"},
+    {"id": "6", "marca": "Citroën", "produtos": 63, "url": "/citroen.png", "link":"citroen"},
+    {"id": "5", "marca": "Subaru", "produtos": 59, "url": "/subaru.png", "link":"subaru"},
+    {"id": "4", "marca": "Peugeot", "produtos": 52, "url": "/peugeot.png", "link":"peugeot"},
+    {"id": "3", "marca": "Mopar", "produtos": 49, "url": "/mopar.jpg", "link":"mopar"},
+    {"id": "1", "marca": "Dodge", "produtos": 47, "url": "/dodge.png", "link":"dodge"}
+]

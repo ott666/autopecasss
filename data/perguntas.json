@@ -1,0 +1,82 @@
+[
+    {   "id":"0",
+        "pergunta": "Como posso comprar os produtos que vejo no site?",
+        "resposta": "Todos os nossos produtos estão disponíveis para compra no Mercado Livre. Basta clicar no link do produto no nosso site para ser redirecionado para a página correspondente no Mercado Livre."
+    },
+    {   "id":"1",
+        "pergunta": "Como é processada a compra?",
+        "resposta": "A compra é totalmente processada pelo Mercado Pago, garantindo segurança e confiabilidade em todas as transações."
+    },
+    {   "id":"2",
+        "pergunta": "Os produtos no site são os mesmos encontrados no Mercado Livre?",
+        "resposta": "Sim, todos os produtos que você vê no nosso site estão listados no Mercado Livre. Mantemos nosso catálogo atualizado para garantir que você tenha acesso aos mesmos produtos em ambas as plataformas."
+    },
+    {   "id":"3",
+        "pergunta": "Quais são as vantagens de comprar pelo Mercado Livre?",
+        "resposta": "O Mercado Livre oferece uma plataforma segura e confiável, com várias opções de pagamento, proteção ao comprador e um sistema eficiente de logística para garantir que você receba seus produtos rapidamente."
+    },
+    {   "id":"4",
+        "pergunta": "Há quanto tempo vocês vendem no Mercado Livre?",
+        "resposta": "Já estamos no Mercado Livre há [X] anos, acumulando experiência e construindo uma reputação sólida como vendedores confiáveis."
+    },
+    {   "id":"5",
+        "pergunta": "Como posso ter certeza da segurança da minha compra?",
+        "resposta": "Todas as transações são realizadas através do Mercado Pago, que oferece várias camadas de segurança para proteger suas informações e garantir que sua compra seja concluída com segurança."
+    },
+    {   "id":"6",
+        "pergunta": "Vocês oferecem suporte pós-venda?",
+        "resposta": "Sim, oferecemos suporte pós-venda através do sistema de mensagens do Mercado Livre. Estamos sempre prontos para ajudar com qualquer dúvida ou problema que você possa ter."
+    },
+    {   "id":"7",
+        "pergunta": "Posso devolver um produto se não estiver satisfeito?",
+        "resposta": "Sim, seguimos as políticas de devolução do Mercado Livre. Se você não estiver satisfeito com sua compra, poderá solicitar a devolução conforme as diretrizes estabelecidas."
+    },
+    {   "id":"8",
+        "pergunta": "Como posso acompanhar o status da minha entrega?",
+        "resposta": "Após a compra, você pode acompanhar o status da entrega diretamente pelo Mercado Livre. Eles fornecem atualizações detalhadas sobre o progresso da sua encomenda."
+    },
+    {   "id":"9",
+        "pergunta": "Vocês têm alguma promoção especial ou desconto?",
+        "resposta": "Oferecemos promoções e descontos regularmente. Fique de olho na nossa página no Mercado Livre para não perder as ofertas especiais."
+    },
+    {   "id":"10",
+        "pergunta": "Vocês oferecem frete grátis?",
+        "resposta": "Sim, muitos de nossos produtos incluem frete grátis. Verifique a página do produto no Mercado Livre para ver se o frete grátis está disponível para sua região."
+    },
+    {   "id":"11",
+        "pergunta": "É possível parcelar a compra sem juros?",
+        "resposta": "Sim, oferecemos a opção de parcelamento sem juros em várias de nossas peças e acessórios automotivos. As condições de parcelamento podem ser verificadas na página do produto no Mercado Livre."
+    },
+    {   "id":"12",
+        "pergunta": "Quais tipos de peças e acessórios automotivos vocês vendem?",
+        "resposta": "Temos uma ampla gama de peças e acessórios automotivos, incluindo filtros, baterias, pneus, ferramentas, e muito mais. Todos disponíveis para compra através do Mercado Livre."
+    },
+    {   "id":"13",
+        "pergunta": "Como funciona o frete grátis?",
+        "resposta": "O frete grátis é oferecido em diversos produtos e varia de acordo com a sua localização e o valor da compra. As informações específicas estão disponíveis na página do produto no Mercado Livre."
+    },
+    {   "id":"14",
+        "pergunta": "Posso parcelar minha compra em quantas vezes?",
+        "resposta": "Oferecemos várias opções de parcelamento, geralmente até 12 vezes sem juros, dependendo do produto e das condições do Mercado Pago."
+    },
+    {   "id":"15",
+        "pergunta": "Vocês têm peças específicas para meu modelo de carro?",
+        "resposta": "Sim, temos uma ampla seleção de peças e acessórios específicos para diferentes modelos de carros. Utilize os filtros de busca no Mercado Livre para encontrar exatamente o que você precisa."
+    },
+    {   "id":"16",
+        "pergunta": "Como posso ter certeza de que as peças são compatíveis com meu veículo?",
+        "resposta": "Cada listagem de produto no Mercado Livre contém informações detalhadas sobre compatibilidade. Se tiver dúvidas, nossa equipe está disponível para ajudar a garantir que você compre a peça certa para o seu veículo."
+    },
+    {   "id":"17",
+        "pergunta": "Há algum custo adicional ao escolher o parcelamento?",
+        "resposta": "Não, o parcelamento sem juros significa que você pagará exatamente o valor da peça ou acessório dividido pelo número de parcelas escolhidas, sem custos adicionais."
+    },
+    {   "id":"18",
+        "pergunta": "Vocês oferecem suporte técnico para instalação das peças?",
+        "resposta": "Sim, podemos fornecer orientações básicas e recomendações para a instalação de peças e acessórios automotivos. Para suporte técnico detalhado, recomendamos consultar um profissional qualificado."
+    },
+    {   "id":"19",
+        "pergunta": "Como faço para aproveitar as ofertas de frete grátis?",
+        "resposta": "Para aproveitar o frete grátis, basta adicionar o produto ao seu carrinho no Mercado Livre e seguir para a finalização da compra. As opções de frete disponíveis serão exibidas automaticamente."
+    }
+]
