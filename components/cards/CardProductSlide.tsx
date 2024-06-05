@@ -35,17 +35,17 @@ export const CardProductSlide = ({ product, ...rest }: CardProductslide) => {
                     </CardContent>
                     <CardFooter className="flex-col items-start  pb-[8px] px-0">
 
-                        <CardTitle className="text-[0.75rem] lg:text-[.875rem]  text-[#42464d] h-[48px] lg:h-[54px] font-poppins font-semibold line-clamp-3 leading-[1rem] lg:leading-[1.125rem]">
+                        <CardTitle className="text-[0.75rem] lg:text-[.875rem]   h-[48px] lg:h-[54px] font-poppins font-semibold line-clamp-3 leading-[1rem] lg:leading-[1.125rem]">
                             {product.title}
                         </CardTitle>
                         <div className="pt-[8px]">
                             <p className="text-[0.625rem] font-poppins lg:text-[.75rem] leading-none block">
                                 Frete grátis
                             </p>
-                            <p className="text-[1rem] font-poppins font-bold  lg:text-[1.25rem] lg:py-[1px] text-primary block">
+                            <p className="text-[1rem] font-poppins font-bold text-yellow-400 lg:text-[1.25rem] lg:py-[1px] block">
                                 {formatPrice(product.price)}
                             </p>
-                            <p className="text-[0.625rem] font-poppins lg:text-[.75rem] leading-none block">
+                            <p className="text-[0.625rem] font-poppins lg:text-[.75rem]  leading-none block">
                                 Parcelamento sem juros
                             </p>
                         </div>

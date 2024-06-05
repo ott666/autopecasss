@@ -9,8 +9,10 @@ import { SliderProdutos } from '@/components/SliderProducts/SliderProducts';
 import SliderCategorias from '@/components/SliderCategorys';
 import Link from 'next/link';
 import Image from 'next/image';
-import SliderBanner from '@/components/SliderBanners';
+import Autoplay from 'embla-carousel-autoplay'
 
+
+import SliderBanner from '@/components/SliderBanners';
 import {
   Carousel,
   CarouselContent,
@@ -18,83 +20,87 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { Hero1 } from '@/components/Sections/Hero1/Hero1';
 
 
 const marcasDestacadas = MarcasData.slice(0,8)
 
 export default function Home() {
   return (
-   <main className="bg-primary">
-    <section id='hero' className='py-0 pt-8'>
+   <main>
+    <Hero1/>
+    <section id='hero' className='py-0 pt-[58px]'>
       <Container className='px-0 lg:px-0'>
 
-    <Carousel opts={{loop:true}} className='hidden lg:flex'>
-    
-    <CarouselContent className=''>
-        <CarouselItem><div className='w-full   bg-black'>
-          <Image src={'/banners/sliderHero/1568x400Azul.png'}  objectFit='cover' layout='responsive' width={1568} height={400} alt='banner'/>
-          </div></CarouselItem>
-       
-        <CarouselItem><div className='w-full   bg-black'>
-          <Image src={'/banners/sliderHero/1568x400Amarelo.png'}  objectFit='cover' layout='responsive' width={1568} height={400} alt='banner'/>
-          </div></CarouselItem>
-       
-        <CarouselItem><div className='w-full   bg-black'>
-          <Image src={'/banners/sliderHero/1568x400Azul2.png'}  objectFit='cover' layout='responsive' width={1568} height={400} alt='banner'/>
-          </div></CarouselItem>
-  
-       
-      </CarouselContent>
-
-
-  
-      <CarouselPrevious className='z-[2]' />
-    <CarouselNext className='z-[2]' />
-  
-</Carousel>
-<Carousel opts={{loop:true}} className='lg:hidden'>
-    
+        <Carousel       plugins={[
+            Autoplay({
+              delay: 3000,
+                  }),
+                ]}
+          opts={{loop:true}}  className='hidden smm:flex'>
+              
+          <CarouselContent className=''>
+              <CarouselItem><div className='w-full   bg-black'>
+                <Image src={'/banners/Banner1568-400.png'}  objectFit='cover' layout='responsive' width={1568} height={400} alt='banner'/>
+                </div></CarouselItem>
+            
+              <CarouselItem><div className='w-full   bg-black'>
+                <Image src={'/banners/Banner2-1568-400.png'}  objectFit='cover' layout='responsive' width={1568} height={400} alt='banner'/>
+                </div></CarouselItem>
+            
+              <CarouselItem><div className='w-full   bg-black'>
+                <Image src={'/banners/Banner3-1568-400.png'}  objectFit='cover' layout='responsive' width={1568} height={400} alt='banner'/>
+                </div></CarouselItem>
+        
+            
+          </CarouselContent>
+        </Carousel>
+  <Carousel       plugins={[
+          Autoplay({
+            delay: 3000,
+          }),
+        ]}
+  opts={{loop:true}}  className='sm:hidden'>
+      
 
       <CarouselContent className=''>
         <CarouselItem><div className='w-full   bg-black'>
-          <Image src={'/banners/sliderHero/640x295Azul.png'}  objectFit='cover' layout='responsive' width={640} height={295} alt='banner'/>
+          <Image src={'/banners/Banner640-295.png'}  objectFit='cover' layout='responsive' width={640} height={295} alt='banner'/>
           </div></CarouselItem>
        
         <CarouselItem><div className='w-full   bg-black'>
-          <Image src={'/banners/sliderHero/640x295Amarelo.png'}  objectFit='cover' layout='responsive' width={640} height={295} alt='banner'/>
+          <Image src={'/banners/Banner2-640-295.png'}  objectFit='cover' layout='responsive' width={640} height={295} alt='banner'/>
           </div></CarouselItem>
        
-        <CarouselItem><div className='w-full   bg-black'>
-          <Image src={'/banners/sliderHero/640x295Azul2.png'}  objectFit='cover' layout='responsive' width={640} height={295} alt='banner'/>
+        <CarouselItem><div className='w-full  bg-black'>
+          <Image src={'/banners/Banner3-640-295.png'}  objectFit='cover' layout='responsive' width={640} height={295} alt='banner'/>
           </div></CarouselItem>
       
        
       </CarouselContent>
 
   
-      <CarouselPrevious />
-    <CarouselNext />
+   
   
 </Carousel>
       </Container>
 
     </section>
 
-    <Container className=" flex items-center bg-[#082477] py-[16px]">
-          <h3 className="uppercase font-poppins text-[.875rem] lg:text-[1.25rem] text-white font-bold">destaque semanal</h3>
-    </Container>
-    <Container id='carousel1' className='pr-0 bg-white pt-3'>
-      <SliderProdutos produtos={produtosDestacados.slice(0,10)}/>
-      <Link className='uppercase flex justify-center lg:justify-end text-[0.75rem] lg:font-bold lg:text-[.875rem] text-center gap-[10px] pt-[10px] items-center font-poppins font-semibold text-primary ' href={'/'}>ver todos <ArrowRight size={24}/></Link>
-    </Container>
+     <div className="container max-[440px]:pr-[0px] max-[440px]:pl-[10px]">
+    <h3 className="uppercase font-poppins text-[.875rem] lg:text-[1.25rem] text-white font-bold">destaque semanal</h3>
 
-    <Container id='banners' className='bg-white'>
+      <SliderProdutos produtos={produtosDestacados.slice(0,10)}/>
+      <Link className='uppercase flex justify-center lg:justify-end text-[0.75rem] lg:font-bold lg:text-[.875rem] text-center gap-[10px] pt-[10px] items-center font-poppins font-semibold  ' href={'/'}>ver todos <ArrowRight size={24}/></Link>
+      </div>
+
+    <Container id='banners'>
         <Banners/>
     </Container>
 
     <MarcasSct id='marcas' marcas={marcasDestacadas} title="Marcas Recomendadas" />
 
-    <Container className=' bg-white pt-3'>
+    <Container className='  pt-3'>
       <div className='flex justify-between items-center py-5'>
         <div className='flex items-center gap-[5px]'>
           <Star size={20}/>
@@ -121,7 +127,7 @@ export default function Home() {
     
     <Container className='bg-white hidden min-[600px]:block'>
 
-      <Image src={'/banners/sliderHero/1568x400Amarelo.png'} width={1504} height={248} layout='responsive' alt='banner'/>
+      <Image src={'/banners/Banner3-1568-400.png'} width={1504} height={248} layout='responsive' alt='banner'/>
     </Container>
 
     <Container className=' bg-white pt-3 lg:flex lg:justify-between lg:pt-10 '>

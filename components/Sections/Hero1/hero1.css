@@ -1,0 +1,17 @@
+/* hero.css */
+@keyframes scaleInOut {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.3);
+    }
+  }
+  
+  .heroImage {
+    animation: scaleInOut 24s infinite linear;
+    
+  }
+section{
+    overflow: hidden;
+}  
